@@ -1,0 +1,37 @@
+def aktif(kasa,alinanCek,bankaH,alacakSenetleri,ticariMal,binalar,tasitlar,demirbaslar):
+    global donenVarliklar
+    donenVarliklar=kasa+alinanCek+bankaH+alacakSenetleri+ticariMal
+    print("Dönen Varlıklar Toplamı:",donenVarliklar)
+
+    global duranVarliklar
+    duranVarliklar=binalar+tasitlar+demirbaslar
+    print("Duran Varlıklar Toplamı:",duranVarliklar)
+    
+    global aktifToplami
+    aktifToplami=donenVarliklar+duranVarliklar
+    print("Aktif Toplamı:",aktifToplami)
+
+
+
+def pasif(bankaKredileri,saticilar,uzVadeliBankaKredileri,uzVadeliBorcSenedi,sermayeHesabi):
+    global kvyk
+    kvyk=bankaKredileri+saticilar
+    print("Kısa Vadeli Yabancı Kaynaklar Toplamı:",kvyk)
+    
+    global uvyk
+    uvyk=uzVadeliBankaKredileri+uzVadeliBorcSenedi
+    print("Uzun Vadeli Yabancı Kaynaklar Toplamı:",uvyk)
+
+    global ozkaynaklar
+    ozKaynaklar=sermayeHesabi
+    print("Toplam Öz Kaynaklar:",ozKaynaklar)
+    
+    global pasifToplami
+    pasifToplami=kvyk+uvyk+ozKaynaklar
+    print("Pasif Toplamı:",pasifToplami)
+
+    
+if aktifToplami==pasifToplami:
+    print("Bilanço doğru hesaplanmıştır.")
+else:
+    print("Bilanço yanlış hesaplanmıştır.")
